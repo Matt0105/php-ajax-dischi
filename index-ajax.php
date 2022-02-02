@@ -13,27 +13,29 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <!-- header -->
-    <?php include_once __DIR__ . '/partials/header.php' ?>
+    <div id="app">
+        <!-- header -->
+        <?php include_once __DIR__ . '/partials/header.php' ?>
 
-    <!-- main -->
-    <?php include_once __DIR__ . '/server/db.php' ?>
-    <main id="app">
-        <div class="card-container">
-            <div v-for="song in musicData" class="card">
-                <img :src="`http://localhost:8888/php-ajax-dischi/img/${song.img}`" alt="">
-                <h2> {{song.title}} </h2>
-                <p class="author">{{song.author}}</p>
-                <p class="year">{{song.year}}</p>
+        <!-- main -->
+        <?php include_once __DIR__ . '/server/db.php' ?>
+        <main id="app">
+            <div class="card-container">
+                <div v-for="song in musicData" class="card">
+                    <img :src="`http://localhost:8888/php-ajax-dischi/img/${song.img}`" alt="">
+                    <h2> {{song.title}} </h2>
+                    <p class="author">{{song.author}}</p>
+                    <p class="year">{{song.year}}</p>
+                </div>
+                
             </div>
-            
-        </div>
-    </main>
+        </main>
 
-    <!-- footer -->
-    <?php include_once __DIR__ . '/partials/footer.php' ?>
+        <!-- footer -->
+        <?php include_once __DIR__ . '/partials/footer.php' ?>
 
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
 </body>
