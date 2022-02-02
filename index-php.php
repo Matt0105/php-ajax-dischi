@@ -20,12 +20,22 @@
     <?php include_once __DIR__ . '/server/db.php' ?>
     <main>
         <div class="card-container">
-            <div class="card">
-                <img src="http://<?php echo $_SERVER['HTTP_HOST'] ?>/php-ajax-dischi/img/<?php echo $musicData[0]["img"] ?>" alt="">
-                <h2>titolone</h2>
-                <p class="author">paragrafone</p>
-                <p class="year">anno</p>
-            </div>
+            
+                
+
+                <?php foreach ($musicData as $song) { ?>
+                    <div class="card">
+                        <img src="http://<?php echo $_SERVER['HTTP_HOST'] ?>/php-ajax-dischi/img/<?php echo $song["img"]; ?>" alt="">
+                        <h2> <?=$song["title"]?> </h2>
+                        <p class="author"><?=$song["author"]?></p>
+                        <p class="year"><?=$song["year"]?></p>
+                    </div>
+                <?php
+                    }
+                ?>
+
+
+            
           
             </div>
         </div>
