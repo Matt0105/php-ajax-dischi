@@ -1,6 +1,6 @@
 <?php 
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,12 +17,14 @@
     <?php include_once __DIR__ . '/partials/header.php' ?>
 
     <!-- main -->
+    <?php include_once __DIR__ . '/server/db.php' ?>
     <main>
         <div class="card-container">
             <div class="card">
-                <img src="https://picsum.photos/200/300" alt="">
+                <img src="http://<?php echo $_SERVER['HTTP_HOST'] ?>/php-ajax-dischi/img/<?php echo $musicData[0]["img"] ?>" alt="">
                 <h2>titolone</h2>
-                <p>paragrafone</p>
+                <p class="author">paragrafone</p>
+                <p class="year">anno</p>
             </div>
           
             </div>
