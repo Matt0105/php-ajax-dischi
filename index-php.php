@@ -18,7 +18,15 @@
 
     <!-- main -->
     <main>
-
+        <div class="card-container">
+            <div class="card">
+                <img src="https://picsum.photos/200/300" alt="">
+                <h2>titolone</h2>
+                <p>paragrafone</p>
+            </div>
+          
+            </div>
+        </div>
     </main>
 
     <!-- footer -->
