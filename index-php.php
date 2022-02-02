@@ -21,23 +21,17 @@
     <main>
         <div class="card-container">
             
-                
+            <?php foreach ($musicData as $song) { ?>
+                <div class="card">
+                    <img src="http://<?php echo $_SERVER['HTTP_HOST'] ?>/php-ajax-dischi/img/<?php echo $song["img"]; ?>" alt="">
+                    <h2> <?=$song["title"]?> </h2>
+                    <p class="author"><?=$song["author"]?></p>
+                    <p class="year"><?=$song["year"]?></p>
+                </div>
+            <?php
+                }
+            ?>
 
-                <?php foreach ($musicData as $song) { ?>
-                    <div class="card">
-                        <img src="http://<?php echo $_SERVER['HTTP_HOST'] ?>/php-ajax-dischi/img/<?php echo $song["img"]; ?>" alt="">
-                        <h2> <?=$song["title"]?> </h2>
-                        <p class="author"><?=$song["author"]?></p>
-                        <p class="year"><?=$song["year"]?></p>
-                    </div>
-                <?php
-                    }
-                ?>
-
-
-            
-          
-            </div>
         </div>
     </main>
 
