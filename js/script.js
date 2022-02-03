@@ -7,7 +7,7 @@ const app = new Vue({
     methods: {
 
         call() {
-            console.log(this.myGenre);
+            console.log("test");
             axios.get(`http://localhost:8888/php-ajax-dischi/server/controller-api.php?genre=${this.myGenre}`)
             .then((res) => {
                 this.musicData = res.data.results;
